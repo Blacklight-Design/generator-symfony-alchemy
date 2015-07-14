@@ -1,6 +1,6 @@
 {
   "name": "generator-symfony-alchemy",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Gulp recipes for asset management in Symfony applications",
   "license": "MIT",
   "main": "app/index.js",
