@@ -1,0 +1,15 @@
+{
+  "css": {
+    "main.css": [
+      "<% if(css_preprocessor == 'SASS'){ %>app/Resources/public/css/app.scss<% } else if(css_preprocessor == 'Less') { %>app/Resources/public/css/app.less<% } else { %>app/Resources/public/css/app.css<% } %>"
+    ]
+  },
+  "js": {
+    "main.js": [
+      "app/Resources/public/js/app.js"
+    ]
+  },
+  "replace": {
+    "images/": "img/"
+  }
+}

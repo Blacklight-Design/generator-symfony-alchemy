@@ -1,0 +1,46 @@
+{
+  "name": "generator-symfony-alchemy",
+  "version": "0.2.1",
+  "description": "Gulp recipes for asset management in Symfony applications",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "blacklight-design/generator-symfony-alchemy",
+  "author": {
+    "name": "Zander Janse van Rensburg",
+    "email": "zander@blacklight.co.za",
+    "url": "http://blacklight.co.za"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {},
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "generator",
+    "gulp",
+    "symfony",
+    "symfony2",
+    "gulp-symfony2",
+    "assetic",
+    "asset management",
+    "asset files",
+    "assets",
+    "css",
+    "javascript",
+    "fonts",
+    "images",
+    "build",
+    "watch",
+    "serve",
+    "minify"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.0",
+    "yeoman-generator": "^0.20.1",
+    "yosay": "^1.0.4",
+    "yo": ">=1.0.0"
+  }
+}

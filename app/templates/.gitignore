@@ -1,0 +1,5 @@
+# Symfony Alchemy
+.sass-cache
+node_modules
+app/Resources/public/.css
+app/Resources/public/vendor/
