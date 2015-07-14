@@ -16,7 +16,7 @@ var appDir = 'app';
 var resourcePublicDir = appDir + '/Resources/public';
 var destDir = 'web';
 var minify = false;
-var proxyDomain = <%= proxy_domain %>;
+var proxyDomain = '<%= proxy_domain %>';
 
 // JS task.
 gulp.task('js', function () {
@@ -163,8 +163,8 @@ gulp.task('watch', ['default'], function () {
   var cssWatcher = gulp.watch(resourcePublicDir + '/css/**/*', ['css']);
   cssWatcher.on('change', function (event) {
     if (event.type === 'deleted') {
-      delete cached.caches['css'][event.path];
-      remember.forget('css', event.path);
+      delete $.cached.caches['css'][event.path];
+      $.remember.forget('css', event.path);
     }
   });
 
@@ -172,8 +172,8 @@ gulp.task('watch', ['default'], function () {
   var jsWatcher = gulp.watch(resourcePublicDir + '/js/**/*', ['js']);
   jsWatcher.on('change', function (event) {
     if (event.type === 'deleted') {
-      delete cached.caches['js'][event.path];
-      remember.forget('js', event.path);
+      delete $.cached.caches['js'][event.path];
+      $.remember.forget('js', event.path);
     }
   });
 
@@ -181,7 +181,7 @@ gulp.task('watch', ['default'], function () {
   var fontsWatcher = gulp.watch(resourcePublicDir + '/fonts/**/*', ['fonts']);
   fontsWatcher.on('change', function (event) {
     if (event.type === 'deleted') {
-      delete cached.caches.fonts[event.path];
+      delete $.cached.caches.fonts[event.path];
     }
   });
 
@@ -189,15 +189,15 @@ gulp.task('watch', ['default'], function () {
   var imagesWatcher = gulp.watch(resourcePublicDir + '/img/**/*', ['images']);
   imagesWatcher.on('change', function (event) {
     if (event.type === 'deleted') {
-      delete cached.caches.images[event.path];
+      delete $.cached.caches.images[event.path];
     }
   });
 
   // Watch for asset changes.
   var assetsWatcher = gulp.watch('assets.json', ['reload-config']);
   assetsWatcher.on('change', function () {
-    remember.forgetAll('js');
-    remember.forgetAll('css');
+    $.remember.forgetAll('js');
+    $.remember.forgetAll('css');
   });
 
   // Watch for bower changes.
